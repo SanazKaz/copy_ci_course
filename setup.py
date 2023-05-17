@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='ci_demo',
+    name='ci_course',
 
     version='0.1',
 
@@ -20,6 +20,7 @@ setup(
         ],
         'dev': [
             'flake8',
+            'pytest',
         ],
     },
 

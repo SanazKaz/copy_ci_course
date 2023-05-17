@@ -1,19 +1,18 @@
-import unittest
-
 import ci_course
 
 
-class TestFunctionality(unittest.TestCase):
-
-    def test_greeting(self):
-        self.assertEqual(ci_course.greet(), "Hello ")
-        self.assertEqual(ci_course.greet("Fergus"), "Hello Fergus")
-
-    def test_minimum(self):
-        self.assertEqual(ci_course.minimum(1, 2, 3), 1)
-        self.assertEqual(ci_course.minimum(1.2, 2.3), 1.2)
-        self.assertEqual(ci_course.minimum(-1.2, -3), -3)
+def test_greet():
+    """
+    Test the function `greet` in functionality.py
+    """
+    assert ci_course.greet() == "Hello "
+    assert ci_course.greet("Fergus") == "Hello Fergus"
 
 
-if __name__ == '__main__':
-    unittest.main()
+def test_minimum():
+    """
+    Test the function `minimum` in functionality.py
+    """
+    assert ci_course.minimum(1, 2, 3) == 1
+    assert ci_course.minimum(1.2, 2.3) == 1.2
+    assert ci_course.minimum(-1.2, -3) == -3
